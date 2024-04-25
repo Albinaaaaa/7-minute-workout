@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seven_minute_workout/core/widgets/seven_minute_workout/seven_minute_workout.dart';
 import 'package:seven_minute_workout/core/widgets/sport_circle/circle_gradient.dart';
 
 class SportCircle extends StatefulWidget {
@@ -60,35 +61,7 @@ class _SportCircleState extends State<SportCircle>
             radius: 130, gradient: true, color: Color(0xFF87BEFA))),
         buildAnimatedCircle(const CircleGradient(
             radius: 80, gradient: false, color: Color(0xFF87BEFA))),
-        RichText(
-          text: const TextSpan(
-            style: TextStyle(
-              fontFamily: 'Yatra',
-              fontSize: 35,
-              color: Colors.white,
-              shadows: <Shadow>[
-                Shadow(
-                  offset: Offset(1.0, 3.0),
-                  blurRadius: 4.0,
-                  color: Color.fromARGB(75, 0, 0, 0),
-                ),
-              ],
-            ),
-            children: <TextSpan>[
-              TextSpan(
-                text: '7',
-                style: TextStyle(fontWeight: FontWeight.w400),
-              ),
-              TextSpan(
-                text: ' minute ',
-                style: TextStyle(
-                  color: Color(0xFF007AFF),
-                ),
-              ),
-              TextSpan(text: 'workout'),
-            ],
-          ),
-        ),
+        const SevenMinuteWorkout(size: 35),
       ],
     );
   }

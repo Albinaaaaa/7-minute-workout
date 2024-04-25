@@ -11,7 +11,7 @@ class CustomButton extends StatelessWidget {
     return FractionallySizedBox(
       widthFactor: 1,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: onTap,
         style: ElevatedButton.styleFrom(
           foregroundColor: const Color.fromARGB(255, 242, 245, 248),
           backgroundColor: const Color.fromARGB(255, 0, 122, 255),
